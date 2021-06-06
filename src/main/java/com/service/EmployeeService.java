@@ -3,7 +3,6 @@ package com.service;
 import com.gateway.model.Candidate;
 import com.gateway.model.Employee;
 import com.gateway.model.Position;
-
 import java.util.List;
 
 public interface EmployeeService {

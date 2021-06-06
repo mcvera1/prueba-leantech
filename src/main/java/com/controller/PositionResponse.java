@@ -1,7 +1,6 @@
 package com.controller;
 
 import com.controller.dto.CandidateDto;
-import com.controller.dto.EmployeeDto;
 import com.controller.dto.EmployeeResponseDto;
 import com.controller.dto.PositionResponseDto;
 import com.gateway.model.Employee;
