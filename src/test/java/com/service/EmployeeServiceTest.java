@@ -1,5 +1,7 @@
 package com.service;
 
+import static org.mockito.Mockito.*;
+
 import com.gateway.EmployeeGateway;
 import com.gateway.model.Candidate;
 import com.gateway.model.Employee;
@@ -11,10 +13,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.Arrays;
 import java.util.List;
-import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EmployeeServiceTest {

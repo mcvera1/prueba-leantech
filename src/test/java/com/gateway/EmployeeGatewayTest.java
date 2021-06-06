@@ -67,6 +67,18 @@ public class EmployeeGatewayTest {
         Assert.assertNotNull(result);
     }
 
+    @Test(expected = NotFoundException.class)
+    public void updateEmployeeNotFoud() {
+        Employee employee = new Employee(1L, new Candidate(1L, "name", "lastName", "address", 123L, "city"), new Position(1L, "namePosition"), 2.3F);
+        EmployeeService.EmployeeRequest employeeRequest = new EmployeeService.EmployeeRequest();
+        employeeRequest.setId(1L);
+        employeeRequest.setCandidate(new Candidate());
+        employeeRequest.setPosition(new Position());
+        employeeRequest.setSalary(4.3F);
+        when( employeeRepository.findById(2L)).thenReturn(Optional.of(employee));
+        Employee result = employeeGateway.updateEmployee(employeeRequest);
+    }
+
     @Test
     public void deleteEmployee() {
         Employee employee = new Employee(1L, new Candidate(1L, "name", "lastName", "address", 123L, "city"), new Position(1L, "namePosition"), 2.3F);
